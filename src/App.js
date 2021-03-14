@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import "./App.css";
+import voices from "./image/voices.jpeg";
+
+const AppContainer = styled.div`
+  border: 1px solid white;
+  border-radius: 20px;
+
+  padding: 20px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <AppContainer>
+      <header>
+        <h1>music player</h1>
       </header>
-    </div>
+      <nav>
+        <p></p>
+        <ul>
+          <li>Pop</li>
+          <li>Rock</li>
+          <li>Metal</li>
+        </ul>
+      </nav>
+      <section>
+        <input type="text" placeholder="search" />
+        <button type="submit">search</button>
+
+        <div>
+          <div>
+            <img src={voices} alt="album" />
+            <h2>Voices - Tusse</h2>
+          </div>
+        </div>
+      </section>
+    </AppContainer>
   );
 }
 
